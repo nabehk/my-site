@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Google & Yahoo Split View</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+    iframe {
+      flex: 1;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 左側：Google -->
+    <iframe src="https://www.google.com"></iframe>
+
+    <!-- 右側：Yahoo -->
+    <iframe src="https://www.yahoo.com"></iframe>
+  </div>
+</body>
+</html>
