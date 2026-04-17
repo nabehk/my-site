@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Vertical Split View</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* 上 20% */
+    .top {
+      height: 20%;
+      overflow: hidden; /* はみ出し防止 */
+    }
+
+    /* 下 80%（黒塗り） */
+    .bottom {
+      height: 80%;
+      background-color: #000;
+    }
+
+    /* 上部 iframe を 40% 縮小表示 */
+    .top iframe {
+      width: 250%;            /* 100 / 0.4 */
+      height: 250%;           /* 100 / 0.4 */
+      border: none;
+      transform: scale(0.4);  /* ★ 40% に縮小 ★ */
+      transform-origin: top left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 上20%：40%縮小表示 -->
+    <div class="top">
+      <iframe
+        src="https://hk-joho.sakura.ne.jp/Discussion/teacher.php?class=3K">
+      </iframe>
+    </div>
+
+    <!-- 下80%：黒塗り -->
+    <div class="bottom"></div>
+
+  </div>
+</body>
+</html>
